@@ -3,9 +3,12 @@ lint:
 
 build:
 	npm run build
-make 
+
 publish:
 	npm publish --dry-run
 
 install:
 	sudo npm link
+
+explorer:
+	explorer.exe .
