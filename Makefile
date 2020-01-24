@@ -9,6 +9,3 @@ publish:
 
 install:
 	sudo npm link
-
-explorer:
-	explorer.exe .
