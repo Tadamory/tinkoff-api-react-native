@@ -10,5 +10,5 @@ const click = () => {
 };
 
 export default () => {
-	document.querySelector('.btn').addEventListener('click', click);
+  document.querySelector('.btn').addEventListener('click', click);
 };
