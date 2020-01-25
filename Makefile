@@ -9,3 +9,7 @@ publish:
 
 install:
 	sudo npm link
+
+#npm install -g http-server
+server:
+	http-server -c-1
