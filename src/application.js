@@ -9,6 +9,8 @@ const click = () => {
   alert('sdfs');
 };
 
-export default () => {
+const start = () => {
   document.querySelector('.btn').addEventListener('click', click);
 };
+
+start();
