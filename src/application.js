@@ -1,4 +1,4 @@
-/*const OpenAPI = require('@tinkoff/invest-openapi-js-sdk');
+const OpenAPI = require('@tinkoff/invest-openapi-js-sdk');
 
 const autorization = () => {
   const apiURL = 'https://api-invest.tinkoff.ru/openapi';
@@ -14,20 +14,21 @@ const appendData = (data) => {
   p.append(text);
   container.append(p);
 };
-*/
+
 const click = () => {
-  //const api = autorization();
+  const api = autorization();
+
   //(async () => {
 //    await api.sandboxClear();
 //  })();
+
   //const { figi } = await api.searchOne({ ticker: 'AAPL' });
-  //await api.setCurrenciesBalance({ currency: 'USD', balance: 1000 });
+  await api.setCurrenciesBalance({ currency: 'USD', balance: 1000 });
   //await api.instrumentPortfolio({ figi });
   //await api.limitOrder({ operation: 'Buy', figi, lots: 1, price: 100 });
   //await api.instrumentPortfolio({ figi });
   //appendData(xhr.responseText);
-  //appendData('asda');
-  alert('Hello!');
+  appendData(JSON.stringify(api));
 };
 
 export default () => {

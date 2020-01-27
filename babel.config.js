@@ -4,6 +4,9 @@ module.exports = {
       {
         targets: {
           node: 'current',
+          firefox: '60',
+          chrome: '79',
+          safari: '11.1',
         },
       },
     ],
