@@ -1,6 +1,6 @@
 {
   "name": "work-with-service-tadamory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -53,5 +53,9 @@
   },
   "dependencies": {
     "@tinkoff/invest-openapi-js-sdk": "^1.1.3"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
   }
 }
