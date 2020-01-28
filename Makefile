@@ -4,8 +4,8 @@ lint:
 build:
 	npm run pack
 
-#publish:
-	#npm publish --dry-run
+publish:
+	npm publish --dry-run
 
 install:
 	sudo npm link
