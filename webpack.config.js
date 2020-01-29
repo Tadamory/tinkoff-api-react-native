@@ -7,11 +7,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main_bundle.js',
   },
-  new HtmlWebpackPlugin({
-    filename: 'index.html',
-    template: 'src/index.html'
-  }),
-  mode: 'development',
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.html',
+    }),
+  ],
+  mode: 'production',
   module: {
     rules: [
       {
