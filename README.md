@@ -1,9 +1,10 @@
 # Tinkoff data (Apple Inc)
 ## Install
 ```sh
-sudo npm install work-with-service-tadamory -g
+npm install
 ```
-## Start
+
+## Webpack
 ```sh
-http-server
+npm run pack
 ```
