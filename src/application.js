@@ -49,8 +49,8 @@ export default () => {
   const mountButton = document.getElementById('button');
   ReactDOM.render(<Button />, mountButton);
 
-  //const mountData = document.getElementById('dinamics');
-  //ReactDOM.render(<Data />, mountData);
+  const mountData = document.getElementById('dinamics');
+  ReactDOM.render(<Data />, mountData);
 
   //document.querySelector('.btn').addEventListener('click', click);
 };
