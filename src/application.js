@@ -1,3 +1,8 @@
+import ReactDOM from 'react-dom';
+import React from 'react';
+import Button from './Button.jsx';
+import Data from './Data.jsx';
+/*
 const OpenAPI = require('@tinkoff/invest-openapi-js-sdk');
 
 const autorization = () => {
@@ -39,7 +44,13 @@ const click = () => {
 
   })();
 };
-
+*/
 export default () => {
-  document.querySelector('.btn').addEventListener('click', click);
+  const mountButton = document.getElementById('button');
+  ReactDOM.render(<Button />, mountButton);
+
+  //const mountData = document.getElementById('dinamics');
+  //ReactDOM.render(<Data />, mountData);
+
+  //document.querySelector('.btn').addEventListener('click', click);
 };

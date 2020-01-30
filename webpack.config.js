@@ -17,11 +17,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$|jsx/,
         include: path.resolve(__dirname, 'src'),
         loader: 'babel-loader',
         query: {
-          presets: ['@babel/preset-env'],
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react'
+          ],
         },
       },
     ],
