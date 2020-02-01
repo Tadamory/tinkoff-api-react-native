@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import Button from './Button.jsx';
+import Button from './components/Button.jsx';
 
 ReactDOM.render(
   <Button />, 
