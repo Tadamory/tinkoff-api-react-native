@@ -5,7 +5,7 @@ import getData from './tinkoff';
 const Form = () => {
   const [data, setData] = useState(false);
   const click = () => setData(true);
-  const context = (data) ? getData() : [];
+  const content = (data) ? getData() : [];
 
   return (
     <div class="container-fluid mb-4 mt-4">
@@ -13,13 +13,14 @@ const Form = () => {
       <button onClick={click} type="button" class="btn btn-primary">Get data</button>
       <h2>Dynamics of changes in the highest price</h2>
       <div class="container-fluid mb-4 ml-4">
-        <Data context={context} />
+        <Data content={content} />
       </div>
     </div>
   );
 };
 
-const Data = (props) => {
+export const Data = (props) => {
+  alert(JSON.stringify(props));
 /*
   const data = props.context;
   const listItems = data.map((element) => 

@@ -1,4 +1,5 @@
 import OpenAPI from '@tinkoff/invest-openapi-js-sdk';
+import Data from './index';
 
 const auto = () => {
   const apiURL = 'https://api-invest.tinkoff.ru/openapi/sandbox';
@@ -11,7 +12,7 @@ const auto = () => {
 const getData = () => {
   const api = auto();
 
-  const result = async (data) => {
+  const getContent = async () => {
     const { figi } = await api.searchOne({ ticker: 'AAPL' });
     const { candles } = await api.candlesGet({
       from: '2019-08-19T18:38:33.131642+03:00',
@@ -19,26 +20,26 @@ const getData = () => {
       figi,
       interval: 'day',
     });
-
-    alert(candles);
+    Data(candles);
   };
 
+  //getContent().then((content) => Data(content));
+
 /*
-  const result = (async function run() {
+  !(async function run() {
     await api.sandboxClear();
     const { figi } = await api.searchOne({ ticker: 'AAPL' });
-
     const { candles } = await api.candlesGet({
       from: '2019-08-19T18:38:33.131642+03:00',
       to: '2019-08-30T18:48:33.131642+03:00',
       figi,
       interval: 'day',
-    });
+    }).then((content) => content);;
+    alert(candles);
+    result = candles;
   })();
 */
-  alert(JSON.stringify(result));
-
-  return result;
+  //alert(result);
 };
 
 export default getData;
