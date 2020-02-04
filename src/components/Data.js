@@ -7,7 +7,7 @@ export const Data = (props) => {
     return <ul></ul>;
   }
 
-  const listItems = props.content.map((element) => {
+  const listItems = content.map((element) => {
     const { name, currency } = element;
     return <li>{`${name} (${currency})`}</li>;
   });
