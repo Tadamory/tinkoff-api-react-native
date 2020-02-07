@@ -1,4 +1,4 @@
-export const getData = () => {
+const getData = () => {
   const xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://api-invest.tinkoff.ru/openapi/sandbox/market/stocks', false);
   xhr.setRequestHeader('accept', 'application/json');

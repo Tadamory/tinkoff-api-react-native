@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Data = (props) => {
+const Data = (props) => {
   const { content } = props;
 
-  if (content === []) {
+  if ((!content) || (content === [])) {
     return <ul></ul>;
   }
 
