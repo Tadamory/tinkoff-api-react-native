@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
 const dataFromTinkoff = (state = [], action) => {
   switch (action.type) {
-    case 'DATA_UPDATE': {
+    case "DATA_UPDATE": {
       return action.payload.data;
     }
     default:
@@ -11,5 +11,5 @@ const dataFromTinkoff = (state = [], action) => {
 };
 
 export default combineReducers({
-  dataFromTinkoff,
+  dataFromTinkoff
 });

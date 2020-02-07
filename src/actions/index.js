@@ -1,8 +1,8 @@
 const updateData = (data = []) => ({
-  type: 'DATA_UPDATE',
+  type: "DATA_UPDATE",
   payload: {
-    data,
-  },
+    data
+  }
 });
 
 export default updateData;

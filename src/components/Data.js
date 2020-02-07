@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const Data = (props) => {
+const Data = props => {
   const { content } = props;
 
-  if ((!content) || (content === [])) {
+  if (!content || content === []) {
     return <ul></ul>;
   }
 
-  const listItems = content.map((element) => {
+  const listItems = content.map(element => {
     const { name, currency } = element;
     return <li>{`${name} (${currency})`}</li>;
   });
