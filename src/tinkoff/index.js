@@ -1,4 +1,4 @@
-const getData = () => {
+const getDataFromTinkoff = () => {
   const xhr = new XMLHttpRequest();
   xhr.open(
     "GET",
@@ -23,4 +23,4 @@ const getData = () => {
   return instruments;
 };
 
-export default getData;
+export default getDataFromTinkoff;

@@ -1,15 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as actions from '../actions';
-import getData from "../tinkoff";
+import * as actions from "../actions";
+import getDataFromTinkoff from "../tinkoff";
+import dataSelector from "../selectors";
 
-const mapStateToProps = ({ dataFromTinkoff }) => {
-  const props = { dataFromTinkoff };
+const mapStateToProps = state => {
+  const props = {
+    dataFromTinkoff: dataSelector(state)
+  };
   return props;
 };
 
 const actionCreators = {
-  updateData: actions.updateData,
+  updateData: actions.updateData
 };
 
 const App = props => {
@@ -18,10 +21,10 @@ const App = props => {
   const handleClick = e => {
     e.preventDefault();
     const { updateData } = props;
-    updateData(getData());
+    updateData(getDataFromTinkoff());
   };
 
-  const getlistElements = content => {
+  const renferElements = content => {
     if (!content || content === []) {
       return <ul></ul>;
     }
@@ -39,7 +42,9 @@ const App = props => {
         Get data
       </button>
       <h2>Stock list:</h2>
-      <div class="container-fluid mb-4 ml-4">{getlistElements(dataFromTinkoff)}</div>
+      <div class="container-fluid mb-4 ml-4">
+        {renferElements(dataFromTinkoff)}
+      </div>
     </div>
   );
 };
