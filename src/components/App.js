@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import updateData from '../actions';
+import * as actions from '../actions';
 import getData from "../tinkoff";
 
 const mapStateToProps = ({ dataFromTinkoff }) => {
@@ -8,16 +8,20 @@ const mapStateToProps = ({ dataFromTinkoff }) => {
   return props;
 };
 
+const actionCreators = {
+  updateData: actions.updateData,
+};
+
 const App = props => {
   const { dataFromTinkoff } = props;
 
   const handleClick = e => {
     e.preventDefault();
-    const { dispatch } = props;
-    dispatch(updateData(getData()));
+    const { updateData } = props;
+    updateData(getData());
   };
 
-  const listElements = content => {
+  const getlistElements = content => {
     if (!content || content === []) {
       return <ul></ul>;
     }
@@ -35,9 +39,9 @@ const App = props => {
         Get data
       </button>
       <h2>Stock list:</h2>
-      <div class="container-fluid mb-4 ml-4">{listElements(dataFromTinkoff)}</div>
+      <div class="container-fluid mb-4 ml-4">{getlistElements(dataFromTinkoff)}</div>
     </div>
   );
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, actionCreators)(App);
