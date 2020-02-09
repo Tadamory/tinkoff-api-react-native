@@ -1,26 +1,17 @@
-import ReactDOM from "react-dom";
 import React from "react";
-
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import { createStore } from "redux";
-import reducers from "./reducers/index";
+import reducers from "./reducers";
 
-import Form from "./components/Form";
-import updateData from "./actions/index";
+import App from "./components/App";
+import updateData from "./actions";
 
 const store = createStore(reducers);
 
-const containerElement = document.getElementById("form");
-
-const render = text => {
-  ReactDOM.render(
-    <Form dispatch={store.dispatch} updateData={updateData} content={text} />,
-    containerElement
-  );
-};
-
-store.subscribe(() => {
-  const { dataFromTinkoff } = store.getState();
-  render(dataFromTinkoff);
-});
-
-render();
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("form")
+);
