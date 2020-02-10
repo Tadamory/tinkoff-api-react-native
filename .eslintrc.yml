@@ -1,9 +1,7 @@
 ---
 plugins:
   # https://github.com/babel/eslint-plugin-babel
-  - babel
-  - import
-  - prettier
+  - react
 
 # https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
@@ -14,13 +12,16 @@ env:
 parser: babel-eslint
 
 extends:
-  - "airbnb-base"
   - "eslint:recommended"
   - "plugin:react/recommended"
-  - "prettier"
 
 rules:
   no-console: 0
   no-alert: 0
   spaced-comment: 0
-  prettier/prettier: error
+  react/jsx-uses-react: error
+  react/jsx-uses-vars: error
+
+settings: 
+  react: 
+    version: detect
