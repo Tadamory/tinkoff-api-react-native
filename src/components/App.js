@@ -1,32 +1,22 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { connect } from "react-redux";
-import * as actions from "../actions";
+
+import { updateData } from "../actions";
 import getDataFromTinkoff from "../tinkoff";
 import dataSelector from "../selectors";
 
-const mapStateToProps = state => {
-  const props = {
-    dataFromTinkoff: dataSelector(state)
-  };
-  return props;
-};
+const App = () => {
+  const dispatch = useDispatch();
+  const data = useSelector(dataSelector);
 
-const actionCreators = {
-  updateData: actions.updateData
-};
-
-const App = props => {
-  const { dataFromTinkoff } = props;
-
-  const handleClick = e => {
-    e.preventDefault();
-    const { updateData } = props;
-    updateData(getDataFromTinkoff());
+  const handleClick = () => {
+    dispatch(updateData(getDataFromTinkoff()));
   };
 
-  const renferElements = content => {
+  const renderElements = content => {
     if (!content || content === []) {
-      return <ul></ul>;
+      return null;
     }
     const listItems = content.map(element => {
       const { name, currency } = element;
@@ -42,11 +32,9 @@ const App = props => {
         Get data
       </button>
       <h2>Stock list:</h2>
-      <div class="container-fluid mb-4 ml-4">
-        {renferElements(dataFromTinkoff)}
-      </div>
+      <div class="container-fluid mb-4 ml-4">{renderElements(data)}</div>
     </div>
   );
 };
 
-export default connect(mapStateToProps, actionCreators)(App);
+export default App;

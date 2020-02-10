@@ -1,6 +1,6 @@
-export const updateData = (data = []) => ({
-  type: "DATA_UPDATE",
-  payload: {
-    data
-  }
+export const updateData = (dataFromTinkoff = []) => ({
+	type: "DATA_UPDATE",
+	payload: {
+		dataFromTinkoff
+	}
 });
