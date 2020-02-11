@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-
 import { updateData } from "../actions";
 import getDataFromTinkoff from "../tinkoff";
 import dataSelector from "../selectors";
@@ -17,6 +16,7 @@ const App = () => {
     if (!data || data === []) {
       return null;
     }
+    
     const listItems = data.map((element, index) => {
       const { name, currency } = element;
       return <li key={index}>{`${name} (${currency})`}</li>;

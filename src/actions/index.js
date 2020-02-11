@@ -1,6 +1,3 @@
-export const updateData = (dataFromTinkoff = []) => ({
-  type: "DATA_UPDATE",
-  payload: {
-    dataFromTinkoff
-  }
-});
+import { createAction } from "@reduxjs/toolkit";
+
+export const updateData = createAction('UPDATE_DATA');

@@ -1,19 +1,19 @@
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import reducers from "./reducers";
+import { configureStore } from "@reduxjs/toolkit";
+import * as reducers from "./reducers";
 
 import App from "./components/App";
 
-const store = createStore(
-  reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = configureStore({
+	reducer: { ...reducers },
+	devTools: process.env.NODE_ENV !== "production"
+});
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("form")
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById("form")
 );

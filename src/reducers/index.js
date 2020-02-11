@@ -1,15 +1,14 @@
-import { combineReducers } from "redux";
+import { createReducer } from "@reduxjs/toolkit";
+import { updateData } from "../actions";
 
-const dataFromTinkoff = (state = [], action) => {
-  switch (action.type) {
-    case "DATA_UPDATE": {
-      return action.payload.dataFromTinkoff;
-    }
-    default:
-      return state;
-  }
+const initialState = {
+	dataFromTinkoff: []
 };
 
-export default combineReducers({
-  dataFromTinkoff
+const reducers = createReducer(initialState, {
+	[updateData]: (state, action) => {
+		state.dataFromTinkoff = action.payload;
+	}
 });
+
+export default reducers;
