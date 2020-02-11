@@ -5,8 +5,6 @@ import { updateData } from "../actions";
 import getDataFromTinkoff from "../tinkoff";
 import dataSelector from "../selectors";
 
-import _ from 'lodash';
-
 const App = () => {
   const dispatch = useDispatch();
   const data = useSelector(dataSelector);
@@ -15,13 +13,13 @@ const App = () => {
     dispatch(updateData(getDataFromTinkoff()));
   };
 
-  const renderElements = content => {
-    if (!content || content === []) {
+  const renderElements = () => {
+    if (!data || data === []) {
       return null;
     }
-    const listItems = content.map(element => {
+    const listItems = data.map((element, index) => {
       const { name, currency } = element;
-      return <li key={_.uniqueId()}>{`${name} (${currency})`}</li>;
+      return <li key={index}>{`${name} (${currency})`}</li>;
     });
     return <ul>{listItems}</ul>;
   };
@@ -33,7 +31,7 @@ const App = () => {
         Get data
       </button>
       <h2>Stock list:</h2>
-      <div className="container-fluid mb-4 ml-4">{renderElements(data)}</div>
+      <div className="container-fluid mb-4 ml-4">{renderElements()}</div>
     </div>
   );
 };
