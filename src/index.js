@@ -7,13 +7,13 @@ import * as reducers from "./reducers";
 import App from "./components/App";
 
 const store = configureStore({
-	reducer: { ...reducers },
-	devTools: process.env.NODE_ENV !== "production"
+  reducer: { ...reducers },
+  devTools: process.env.NODE_ENV !== "production"
 });
 
 render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById("form")
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("form")
 );
