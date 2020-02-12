@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"data",
+				"getDataFromTinkoff"
+			],
+			[
+				"ti",
+				"tinkoff"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"get",
+				"getData"
+			],
+			[
+				"co",
+				"context"
+			],
+			[
+				"a",
+				"autorization"
+			],
+			[
+				"li",
+				"listItems"
+			],
+			[
+				"i",
+				"innerHTML"
+			],
+			[
+				"mou",
+				"mountData"
+			],
+			[
+				"webpack",
+				"webpack-dev-server"
+			],
+			[
+				"H",
+				"H2\tTag"
+			],
+			[
+				"app",
+				"appendData"
+			],
+			[
+				"h",
+				"h1\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"jsx",
+				"Set Syntax: JSX"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/tadamory/work/tinkoff-api-react-native/src/index.js",
+		"/home/tadamory/work/work-with-service/src/index.js",
+		"/home/tadamory/work/work-with-service/src/actions/index.js",
+		"/home/tadamory/work/work-with-service/src/components/App.js",
+		"/home/tadamory/work/work-with-service/src/reducers/index.js",
+		"/home/tadamory/work/work-with-service/src/selectors/index.js",
+		"/home/tadamory/work/work-with-service/src/tinkoff/index.js",
+		"/home/tadamory/work/work-with-service/package.json",
+		"/home/tadamory/work/work-with-service/webpack.config.js",
+		"/home/tadamory/work/work-with-service/.eslintrc.yml",
+		"/home/tadamory/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/tadamory/work/work-with-service/public/index.html",
+		"/home/tadamory/work/work-with-service/src/components/Data.js",
+		"/home/tadamory/work/work-with-service/babel.config.js",
+		"/home/tadamory/work/work-with-service/README.md",
+		"/home/tadamory/work/work-with-service/src/components/Form.js",
+		"/home/tadamory/.config/sublime-text-3/Packages/ESLint/Default (Linux).sublime-keymap",
+		"/home/tadamory/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/tadamory/.config/sublime-text-3/Packages/User/JsPrettier.sublime-settings",
+		"/home/tadamory/work/work-with-service/src/tinkoff.js",
+		"/home/tadamory/work/work-with-service/.gitignore",
+		"/home/tadamory/work/work-with-service/npm-debug.log",
+		"/home/tadamory/work/work-with-service/src/index.html",
+		"/home/tadamory/work/work-with-service/src/components/Button.js",
+		"/home/tadamory/work/work-with-service/src/index.jsx",
+		"/home/tadamory/work/work-with-service/src/components/Button.jsx",
+		"/home/tadamory/work/work-with-service/src/autorization.js",
+		"/home/tadamory/work/work-with-service/src/components/Data.jsx",
+		"/home/tadamory/work/work-with-service/src/Button.jsx",
+		"/home/tadamory/work/work-with-service/src/Data.jsx",
+		"/home/tadamory/work/work-with-service/src/application.jsx",
+		"/home/tadamory/work/work-with-service/src/application.js",
+		"/home/tadamory/work/work-with-service/Makefile",
+		"/home/tadamory/work/work-with-service/.eslintignore",
+		"/home/tadamory/work/work-with-service/dist/main_bundle.js",
+		"/home/tadamory/work/work-with-service/dist/index.html",
+		"/home/tadamory/work/work-with-service/src/index (react).html",
+		"/home/tadamory/work/work-with-service/src/Data.asx",
+		"/home/tadamory/work/work-with-service/src/Button.asx",
+		"/home/tadamory/work/work-with-service/public/main_bundle.js",
+		"/home/tadamory/work/work-with-service/public/dist/index.js",
+		"/home/tadamory/work/work-with-service/dist/application.js",
+		"/home/tadamory/work/work-with-service/dist/index.js",
+		"/home/tadamory/work/work-with-service/src/test.js",
+		"/home/tadamory/work/work-with-service/public/index.js",
+		"/home/tadamory/work/work-with-service/public/application.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "package-lock.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
