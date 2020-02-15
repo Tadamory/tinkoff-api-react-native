@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateData } from "../actions";
+import { updateData } from "../features";
 import getDataFromTinkoff from "../tinkoff";
 import dataSelector from "../selectors";
 

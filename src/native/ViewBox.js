@@ -1,6 +1,6 @@
 import React from "react";
-import { Provider, useSelector, useDispatch } from "react-redux";
-import { updateData } from "../actions";
+import { useSelector, useDispatch } from "react-redux";
+import { updateData } from "../features";
 import getDataFromTinkoff from "../tinkoff";
 import dataSelector from "../selectors";
 
@@ -22,12 +22,12 @@ async function getMoviesFromApi() {
 
 const ViewBox = () => {
   const dispatch = useDispatch();
-  const data = useSelector(dataSelector);
+  //const data = useSelector(dataSelector);
 
   const handleClick = () => {
-    //dispatch(updateData(getDataFromTinkoff()));
+    dispatch(updateData(getDataFromTinkoff()));
     //alert(JSON.stringify(getMoviesFromApi()));
-    alert("dsgfsd");
+    //alert("dsgfsd");
   };
 
   return (

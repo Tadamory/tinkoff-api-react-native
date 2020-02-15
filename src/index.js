@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
-import * as reducers from "./reducers";
+import * as reducers from "./features";
 
 import App from "./components/App";
 
