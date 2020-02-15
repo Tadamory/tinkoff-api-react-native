@@ -6,13 +6,13 @@
 npm install
 ```
 
-## Webpack
+## Web (webpack)
 
 ```sh
 make build
 ```
 
-## Native
+## Native (expo)
 ```sh
 make expo
 ```
