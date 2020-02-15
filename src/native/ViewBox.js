@@ -25,7 +25,7 @@ const ViewBox = () => {
   const data = useSelector(dataSelector);
 
   const handleClick = () => {
-    dispatch(updateData(getDataFromTinkoff()));
+    //dispatch(updateData(getDataFromTinkoff()));
     //alert(JSON.stringify(getMoviesFromApi()));
     alert("dsgfsd");
   };
