@@ -1,28 +1,16 @@
-const getDataFromTinkoff = () => {
-  const xhr = new XMLHttpRequest();
-  xhr.open(
-    "GET",
-    "https://api-invest.tinkoff.ru/openapi/sandbox/market/stocks",
-    false
-  );
-  xhr.setRequestHeader("accept", "application/json");
-  xhr.setRequestHeader(
-    "Authorization",
-    "Bearer t.o7uOC8iGXrzsV_JXJM30L_57-gkx84O2gyAcuO8RfxFepHkzMJsNxtQO7QsMiC9gp-FJlNOQpm6GGBCTL9f8dw"
-  );
+import axios from "axios";
 
+const getDataFromTinkoff = async (dispatch, updateData) => {
   try {
-    xhr.send();
-  } catch (err) {
-    alert(err);
+    const instance = axios.create({
+      headers: {'accept': 'application/json', 'Authorization': 'Bearer t.o7uOC8iGXrzsV_JXJM30L_57-gkx84O2gyAcuO8RfxFepHkzMJsNxtQO7QsMiC9gp-FJlNOQpm6GGBCTL9f8dw'}
+    });
+    const response = await instance.get("https://api-invest.tinkoff.ru/openapi/sandbox/market/stocks");
+    const { payload } = JSON.parse(response.request.response);
+    dispatch(updateData(payload.instruments));
+  } catch (error) {
+    console.log(error);
   }
-
-  const {
-    payload: { instruments }
-  } = JSON.parse(xhr.response);
-  return instruments;
 };
-
-export const q = () => '123!!!';
 
 export default getDataFromTinkoff;

@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateData } from "../features";
@@ -9,7 +10,7 @@ const App = () => {
   const data = useSelector(dataSelector);
 
   const handleClick = () => {
-    dispatch(updateData(getDataFromTinkoff()));
+    getDataFromTinkoff(dispatch, updateData);
   };
 
   const renderElements = () => {
