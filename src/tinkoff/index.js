@@ -23,4 +23,6 @@ const getDataFromTinkoff = () => {
   return instruments;
 };
 
+export const q = () => '123!!!';
+
 export default getDataFromTinkoff;

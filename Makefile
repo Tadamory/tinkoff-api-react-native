@@ -3,3 +3,6 @@ lint:
 
 build:
 	npm run pack
+
+expo:
+	sudo expo start

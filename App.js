@@ -1,19 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import * as reducers from "./src/reducers";
+import ViewBox from "./src/native/ViewBox";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Привет!!!</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const store = configureStore({
+  reducer: { ...reducers },
+  devTools: process.env.NODE_ENV !== "production"
 });
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <ViewBox />
+    </Provider>
+  );
+};
+
+export default App;
