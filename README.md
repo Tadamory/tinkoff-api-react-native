@@ -9,5 +9,10 @@ npm install
 ## Webpack
 
 ```sh
-npm run pack
+make build
+```
+
+## Native
+```sh
+make expo
 ```
