@@ -5,15 +5,14 @@ import dataSelector from "../selectors";
 import { StyleSheet, View, Text, FlatList } from "react-native";
 
 const Data = () => {
-  
   const state = useSelector(dataSelector);
 
   const renderElements = () => {
     if (!state || state === []) {
       return null;
     }
-    
-    const listItems = state.map((element, index) => {
+
+    const listItems = state.map(element => {
       const { name, currency } = element;
       return `${name} (${currency})`;
     });
@@ -23,8 +22,8 @@ const Data = () => {
   return (
     <View style={styles.container}>
       <FlatList
-        data = {renderElements()}
-        renderItem = {({ item }) => <Text>{item}</Text>}
+        data={renderElements()}
+        renderItem={({ item }) => <Text>{item}</Text>}
       />
     </View>
   );
@@ -32,7 +31,7 @@ const Data = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 20
   }
 });
 

@@ -5,15 +5,15 @@ const initialState = {
 };
 
 const slice = createSlice({
-  name: 'tinkoff',
+  name: "tinkoff",
   initialState: initialState,
   reducers: {
     updateData(state, action) {
       state.dataFromTinkoff = action.payload;
     }
   }
-})
+});
 
-export const { updateData } = slice.actions
+export const { updateData } = slice.actions;
 
 export default slice.reducer;

@@ -4,15 +4,19 @@ import { updateData } from "../features";
 import getDataFromTinkoff from "../tinkoff";
 import dataSelector from "../selectors";
 
-import { Container, Content, Footer, FooterTab, Button, Text } from 'native-base';
+import {
+  Container,
+  Content,
+  Footer,
+  FooterTab,
+  Button,
+  Text
+} from "native-base";
 import { StyleSheet, View } from "react-native";
-import { Font } from 'expo';
-import Data from './Data';
-
+import Data from "./Data";
 
 const ViewBox = () => {
   const dispatch = useDispatch();
-  const data = useSelector(dataSelector);
 
   const handleClickGetData = () => {
     getDataFromTinkoff(dispatch, updateData);
@@ -26,33 +30,27 @@ const ViewBox = () => {
     <Container>
       <Content>
         <View style={styles.container}>
-          <Text>
-            Tinkoff API
-          </Text>
+          <Text>Tinkoff API</Text>
           <Data />
         </View>
       </Content>
       <Footer>
         <FooterTab>
-          <Button active
-            onPress={handleClickGetData}
-          >
+          <Button active onPress={handleClickGetData}>
             <Text>Get Data</Text>
           </Button>
-          <Button
-            onPress={handleClickClearData} 
-          >
+          <Button onPress={handleClickClearData}>
             <Text>Clear</Text>
           </Button>
         </FooterTab>
       </Footer>
-    </Container>    
+    </Container>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 20
   }
 });
 
