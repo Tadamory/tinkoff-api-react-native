@@ -4,38 +4,55 @@ import { updateData } from "../features";
 import getDataFromTinkoff from "../tinkoff";
 import dataSelector from "../selectors";
 
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-
+import { Container, Content, Footer, FooterTab, Button, Text } from 'native-base';
+import { StyleSheet, View } from "react-native";
+import { Font } from 'expo';
+import Data from './Data';
 
 
 const ViewBox = () => {
   const dispatch = useDispatch();
   const data = useSelector(dataSelector);
 
-  const handleClick = () => {
+  const handleClickGetData = () => {
     getDataFromTinkoff(dispatch, updateData);
   };
 
+  const handleClickClearData = () => {
+    dispatch(updateData(null));
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Tinkoff API</Text>
-      <Text></Text>
-      <TouchableOpacity
-        onPress={handleClick}
-        style={{ backgroundColor: "blue" }}
-      >
-        <Text style={{ fontSize: 20, color: "#fff" }}>Get data</Text>
-      </TouchableOpacity>
-    </View>
+    <Container>
+      <Content>
+        <View style={styles.container}>
+          <Text>
+            Tinkoff API
+          </Text>
+          <Data />
+        </View>
+      </Content>
+      <Footer>
+        <FooterTab>
+          <Button active
+            onPress={handleClickGetData}
+          >
+            <Text>Get Data</Text>
+          </Button>
+          <Button
+            onPress={handleClickClearData} 
+          >
+            <Text>Clear</Text>
+          </Button>
+        </FooterTab>
+      </Footer>
+    </Container>    
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    padding: 20,
   }
 });
 
